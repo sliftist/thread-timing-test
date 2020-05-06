@@ -37,7 +37,7 @@ export function formatPercent(frac: number): string {
 export function formatInteger(count: number): string {
     if(count === 0) return "0";
     if(count < 0) {
-        return formatInteger(-count);
+        return "-" + formatInteger(-count);
     }
     if(count < 1000) {
         return formatMinDigits(count, 3);
